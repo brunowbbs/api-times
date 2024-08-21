@@ -9,6 +9,8 @@ server.use(cors());
 
 server.use(express.json());
 
+server.get("/", (req, res) => res.send("ok"));
+
 server.post("/auth", (req, res) => {
   const { email, password } = req.body;
 
